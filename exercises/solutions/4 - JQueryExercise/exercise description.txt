@@ -1,0 +1,11 @@
+basic:
+
+Implement the jQueryExercise.changeParagraphText() function which is called when the page loads. 
+It should find the text paragraph, and change the html content of the paragraph to a different text.
+
+bonus:
+
+In the same function, also use jQuery to add some styling to the paragraph text.
+Change the color and font weight of the text. Also make the text change color when 
+the mouse cursor hovers over it. The color should also change back to its original hue 
+when the mouse cursor leaves the paragraph.

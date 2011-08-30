@@ -1,0 +1,11 @@
+basic:
+
+Run jsLint (execute scripts/jsLint.bat). jsLint reports a list of problems with 
+the JsLintExercise.js. Fix all the problems. Note: jsLint may report only one problem
+at first. There are several others, though.
+
+bonus:
+
+While fixing the problems, discuss them aloud to yourself or a partner. 
+Would the code still run with each problem left in? 
+If the code runs, how serious is the problem?

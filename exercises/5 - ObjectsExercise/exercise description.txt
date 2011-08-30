@@ -1,0 +1,19 @@
+basic:
+
+Within the ObjectsExercise object literal, declare another object called InnerObject.
+InnerObject should have a member variable named 'foo', which should be initialized to 55.
+InnerObject should also have a method named 'getFoo()', which returns the value of foo.
+Use a unit test to verify that it works.
+
+bonus:
+
+The test method 'testEvalJSONAndCallResultingObject' contains a variable named 'JSONString'.
+'JSONString' defines a chunk of JSON data. The JSON data format is the same as the 
+JavaScript object literal format, and can be turned into a live JavaScript object on the fly.
+
+There are two syntax errors in the chunk of JSON, which makes it an invalid JavaScript 
+object and therefore unparsable. Fix the errors.
+
+When the errors are fixed, implement ObjectsExercise.turnJSONStringIntoObject(JSONString) 
+which takes a JSON string, turns it into a live JavaScript object, and returns that object.
+This should make the test run. Hint: use jQuery.parseJSON().

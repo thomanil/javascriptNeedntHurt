@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>BasicProject</title>
+		<link rel="stylesheet" type="text/css" href="./css/BasicProject.css">
+	</head>
+	<body>
+
+		<script type="text/javascript" charset="utf-8">
+			var validateCommentNotEmptyBeforeSubmit = function() {
+				if($("#comment").text() === ""){
+					alert("Empty comment!");
+					return false;
+				}
+				return true;
+			};
+		</script>
+
+		<h1>A web page with problems</h1>
+		
+		<p>
+			This is just a dummy page, but you should still be able to spot some problems
+		</p>
+		
+		<form action="submit_comment">
+			<p>
+				<input type="text" id="comment" value="" >	
+			</p>
+			<p>
+				<input type="submit" value="Post comment" onclick="validateCommentNotEmptyBeforeSubmit()">
+			</p>
+		</form>
+
+	</body>
+</html>

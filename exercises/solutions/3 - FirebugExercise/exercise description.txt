@@ -1,0 +1,16 @@
+basic:
+
+Start Firefox. Open the Firebug tool. Load the index.html page. 
+With Firebug, change the style of the page - without reloading the page or editing the css file.
+Do the following changes:
+
+- Change background color of document to blue
+- Change text color of document to yellow
+- Double the font size
+
+bonus:
+
+Use the Firebug interactive console to add a button with some behavior: When the button is clicked, pop up
+a dialog ( alert("Button pressed!"); ). Again, both button and its event handler must be added directly
+using Firebug. No editing of the js file allowed, no reload of index.html allowed.
+Use either jQuery or just raw DOM scripting.

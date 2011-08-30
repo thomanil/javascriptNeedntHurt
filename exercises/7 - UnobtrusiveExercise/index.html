@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>UnobtrusiveExercise</title>
+		<link rel="stylesheet" type="text/css" href="./css/UnobtrusiveExercise.css">
+		<script src="./lib/jquery-1.4.1.min.js"></script>
+		<script src="./javascript/UnobtrusiveExercise.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+
+			<h1>Food Survey</h1>
+
+			<div class="question" id="q1">
+				<h2>What's best, pie or cake?</h2>
+				<input type="radio" value="1">Cake</input>
+				<input type="radio" value="0">Pie</input>
+			</div>
+
+			<div class="question" id="q2">
+				<h2>Is sugar delicious?</h2>
+				<input type="radio" value="1">Yes</input>
+				<input type="radio" value="0">No</input>
+			</div>
+
+			<div class="question" id="q3">
+				<h2>Where does pizza come from?</h2>
+				<input type="radio" value="1">Italy</input>
+				<input type="radio" value="0">Poland</input>
+				<input type="radio" value="0">Thailand</input>
+			</div>
+
+			<div id="summary">
+				<h2>Done!</h2>
+				<p>You got <span id="result">0</span> out of 3 points.</p>
+			</div>
+
+	</body>
+</html>

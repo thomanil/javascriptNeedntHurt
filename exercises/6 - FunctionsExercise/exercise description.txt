@@ -1,0 +1,18 @@
+basic:
+
+The FunctionsExercise object has a method called incrementEachElement(). 
+It should take an array of numbers and return a new array, where each 
+element has been incremented by one. See the testArrayIncrementEveryElementOfArray() 
+test for expected behavior. Implement incrementEachElement() using the 
+jQuery.map() function (alternatively, write your own map() function).
+
+bonus:
+
+Implement FunctionsExercise.doOnEach(). 
+It should take an array and a function as parameters.
+For each element in the array, pass that element to the parameter function.
+
+Test it: finish writing the testAddEachArrayElementToScreen() test. If it works,
+then "one, two, three" should be added to the document as an html list.
+Confirm this visually, did they show up in the left part of the test.html document after
+the page loaded?

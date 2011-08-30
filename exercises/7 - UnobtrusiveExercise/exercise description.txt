@@ -1,0 +1,9 @@
+basic:
+
+Recreate the Food Survey example shown during the presentation. The markup is provided.
+Add correct behavior in the UnobtrusiveExercise.initSurveyPage() function.
+
+bonus:
+
+When the questions and summary works, imagine what happens when the user has JavaScript turned off.
+Turn off JavaScript in your own browser, then load the page and see what it looks like.

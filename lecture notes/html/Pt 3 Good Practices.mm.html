@@ -1,0 +1,222 @@
+<html>
+<head>
+<title>Pt 3 Good Practices</title>
+<style type="text/css">
+    span.foldopened { color: white; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: visible;
+    cursor:pointer; }
+
+
+    span.foldclosed { color: #666666; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: hidden;
+    cursor:pointer; }
+
+    span.foldspecial { color: #666666; font-size: xx-small; border-style: none solid solid none;
+    border-color: #CCCCCC; border-width: 1; font-family: sans-serif; padding: 0em 0.1em 0em 0.1em; background: #e0e0e0;
+    cursor:pointer; }
+
+    li { list-style: none; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a:link {text-decoration: none; color: black; }
+    a:visited {text-decoration: none; color: black; }
+    a:active {text-decoration: none; color: black; }
+    a:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+<p>Pt 3 Good Practices
+<ul><li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">jsLint</span>
+<ul><li>scary to just fire things up in browser?
+
+</li>
+<li>closest thing to compilation
+<ul><li>jslint
+
+</li>
+
+</ul>
+</li>
+<li>use consistently, treat all warnings as errors = more robust code
+
+</li>
+<li>catches both breaking errors and "code smells"
+
+</li>
+<li>usages
+<ul><li>web
+
+</li>
+<li>cmd line
+
+</li>
+<li>maven
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">demo cmd line jslint</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; ">jslint, run, break, check, fix, verify</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Automated Testing</span>
+<ul><li>Do you write automated unit tests on the serverside?
+
+</li>
+<li>What about the client side, javascript?
+
+</li>
+<li>If not, why?
+<ul><li>TDD even more important for dynamic languages like JavaScript!
+
+</li>
+
+</ul>
+</li>
+<li>Many frameworks
+<ul><li>I like YUI Test. Let's have a look
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Demo of the environment</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; ">yui testcase</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Unobtrusive JavaScript</span>
+<ul><li>Separate structure, appearance and behavior
+<ul><li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">color code style, javascript, markup in three colors</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Next slide, pull out in three color coded files</span>
+
+</li>
+<li>Examples
+<ul><li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Show page with style, javascript, markup in one mess</span>
+
+</li>
+<li>"What's wrong w this page?"
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>Tactics for extracting javascript
+<ul><li>Put javascript in separate js file
+
+</li>
+<li>Put all our code inside a separate namespace
+
+</li>
+<li>Use jQuery to attach event handlers etc after page loads, rather than inline onclick= etc
+
+</li>
+
+</ul>
+</li>
+<li>Namespacing
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">Universal access</span>
+<ul><li>JavaScript shouldn't be a barrier to entry for some users
+<ul><li>Nonstandard browsers
+<ul><li>Mobile browsers
+
+</li>
+<li>Old browsers
+
+</li>
+<li>Screenreaders
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>Progressive enhancement
+<ul><li>Make sure stuff works without javascript first. 
+
+</li>
+<li>Gradually enrich
+
+</li>
+
+</ul>
+</li>
+<li>Determine if a priority at outset!
+
+</li>
+
+</ul>
+</li>
+<li>HOW unobtrusive?
+<ul><li>Use common sense
+
+</li>
+<li>One-line event handlers can be ok. More than that, separate it from your markup
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Crossbrowser development</span>
+<ul><li>Frameworks &gt; raw dom
+
+</li>
+<li>test early and often
+<ul><li>Regularly test in other browsers
+<ul><li>Expect to still find bugs
+
+</li>
+<li>But way fewer thanks to the practices and tools we now use!
+
+</li>
+
+</ul>
+</li>
+<li>Automated regression testing@
+
+</li>
+
+</ul>
+</li>
+<li>Clean, disciplined code
+<ul><li>Use "the good parts"
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul></body>
+</html>

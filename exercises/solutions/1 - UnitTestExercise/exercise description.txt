@@ -1,0 +1,10 @@
+basic:
+
+In test.js, the testAdd() function tests the UnitTestExercise.addNumbers() method.
+Run the testcase (open test.html in Firefox). Verify that it fails. 
+Then implement the add method correctly.
+
+bonus:
+
+Write tests and implementations for subtractNumbers(), 
+divideNumbers() and multiplyNumbers() methods.

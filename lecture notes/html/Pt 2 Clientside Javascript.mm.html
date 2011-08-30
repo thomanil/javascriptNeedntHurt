@@ -1,0 +1,312 @@
+<html>
+<head>
+<title>Pt 2: Clientside JavaScript</title>
+<style type="text/css">
+    span.foldopened { color: white; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: visible;
+    cursor:pointer; }
+
+
+    span.foldclosed { color: #666666; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: hidden;
+    cursor:pointer; }
+
+    span.foldspecial { color: #666666; font-size: xx-small; border-style: none solid solid none;
+    border-color: #CCCCCC; border-width: 1; font-family: sans-serif; padding: 0em 0.1em 0em 0.1em; background: #e0e0e0;
+    cursor:pointer; }
+
+    li { list-style: none; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a:link {text-decoration: none; color: black; }
+    a:visited {text-decoration: none; color: black; }
+    a:active {text-decoration: none; color: black; }
+    a:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+<p>Pt 2: Clientside JavaScript
+<ul><li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Firebug</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Intro</span>
+<ul><li>This is where we run into the "hairy" parts of javascript
+
+</li>
+<li>So let's add some tools to make our lives simpler
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">Note: there are also alternatives for Safari, IE, Opera, Chrome...</span>
+
+</li>
+
+</ul>
+</li>
+<li>Console
+<ul><li>Turn it on
+<ul><li>Write and catch an error to illustrate
+
+</li>
+<li>Error printing
+
+</li>
+
+</ul>
+</li>
+<li>Logging
+<ul><li>Old way of developing: alert();
+
+</li>
+<li>Better: use console.log();
+
+</li>
+
+</ul>
+</li>
+<li>Interactive console
+<ul><li>"How do you explore new apis?"
+
+</li>
+<li>Write code or tests and reload page each time = way too slow
+
+</li>
+<li>Just use the interactive console to look around on the live page
+
+</li>
+<li>Do a simple example
+<ul><li>Use jQuery to find an element, set its color
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>Inspector
+<ul><li>Inspect element, explore DOM model
+
+</li>
+<li>Use it to update styling on the dom without reloading web page
+
+</li>
+
+</ul>
+</li>
+<li>Debugger
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">The DOM</span>
+<ul><li>Who here knows what the DOM is?
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">Give a short slow explanation w. graphics on slides</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Basic DOM Scripting</span>
+<ul><li>Model changes = visible bits update instantly
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Live Example</span>
+<ul><li>Use Firebug interactive console
+
+</li>
+<li>Let's add, find, and change something in the page
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">demo</span>
+<ul><li>document.write("&lt;h1 id='test'&gt;Header&lt;/h1&gt;");
+
+</li>
+<li>var element = document.getElementById("test");
+
+</li>
+<li>element.innerHTML = "&lt;em&gt;Changed and emphasized&lt;/em&gt;";
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">DOM Api: Crossbrowser headache</span>
+<ul><li>DOM api awkward and verbose
+
+</li>
+<li>Bigger problem: crossbrowser quirks
+
+</li>
+<li>Illustrate specific example
+<ul><li>Example: getElementById behavior, id vs name...
+
+</li>
+
+</ul>
+</li>
+<li>Check out Quicrksmode sometime!
+
+</li>
+<li>Solution.... frameworks!
+<ul><li>Abstract away browser differences
+
+</li>
+<li>Cleaner API
+
+</li>
+
+</ul>
+</li>
+<li>We'll look at jQuery, one of the leaders right now
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">jQuery</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Biggest Win:</span>
+<ul><li>Crossbrowser
+
+</li>
+<li>Traverse DOM
+
+</li>
+<li>Manipulate DOM
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">+ Lots of Other Stuff</span>
+<ul><li>Collection traversal, server communication, etc etc
+
+</li>
+<li>jQuery UI
+<ul><li>Widgets and effects
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">The JQuery object</span>
+<ul><li>Visualize jQuery object as a wrapper around one or more elements in the DOM
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Find stuff</span>
+<ul><li>Selectors
+<ul><li>CSS syntax ++
+
+</li>
+<li>use graphics + firebug console.log() to visualize jQjuery "wrapper"
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Change stuff</span>
+<ul><li>Manipulate DOM
+<ul><li>Inject, change, remove elements
+
+</li>
+
+</ul>
+</li>
+<li>Trigger events
+<ul><li>Element.hide(), show()
+
+</li>
+
+</ul>
+</li>
+<li>Bind functions to events
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Chaining</span>
+<ul><li>Every function returns the &nbsp;jQuery object again
+
+</li>
+<li>Fluent api
+
+</li>
+<li>But don't overdo it!
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Live Example</span>
+<ul><li>demo
+<ul><li>$("body").append("&lt;p id='jqtest'&gt;Test&lt;/p&gt;");
+
+</li>
+<li>$("#jqtest").text("Hepp!");
+
+</li>
+<li>$("#jqtest").hide();
+
+</li>
+<li>$("#jqtest").show().css("font-size","500%").wrap("&lt;em /&gt;");
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Prepared Example</span>
+<ul><li>Food Survey
+
+</li>
+<li>&lt;Show food survey webpage&gt;
+<ul><li>How much work do you think this is to implement?
+
+</li>
+
+</ul>
+</li>
+<li>&lt;Show code&gt;
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Caution!</span>
+<ul><li><p>Heavy use of jQuery can look like a language all its own. Some people just "code jquery", stop seeing it as a separate tool. 
+<p>Learn basic js first, so you're able to separate the core language from frameworks.
+</li>
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul></body>
+</html>

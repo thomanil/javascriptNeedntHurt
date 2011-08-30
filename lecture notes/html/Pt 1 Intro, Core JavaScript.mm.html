@@ -1,0 +1,473 @@
+<html>
+<head>
+<title>Pt 1 Intro, Core JavaScript</title>
+<style type="text/css">
+    span.foldopened { color: white; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: visible;
+    cursor:pointer; }
+
+
+    span.foldclosed { color: #666666; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: hidden;
+    cursor:pointer; }
+
+    span.foldspecial { color: #666666; font-size: xx-small; border-style: none solid solid none;
+    border-color: #CCCCCC; border-width: 1; font-family: sans-serif; padding: 0em 0.1em 0em 0.1em; background: #e0e0e0;
+    cursor:pointer; }
+
+    li { list-style: none; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a:link {text-decoration: none; color: black; }
+    a:visited {text-decoration: none; color: black; }
+    a:active {text-decoration: none; color: black; }
+    a:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+<p>Pt 1 Intro, Core JavaScript
+<ul><li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Intro</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Who are you?</span>
+<ul><li>How much experience here?
+<ul><li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Done any js?</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">0-10s of LOC?</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">100s of LOC?</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">1000s of LOC?</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>Java people? .Net people? Other?
+
+</li>
+<li>Who likes javascript? Who doesn't? Why?
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Who am I?</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; ">JavaScript enthusiast</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">Not an expert</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">Few thousand LOC, few hundred hours, little over one year</span>
+
+</li>
+<li>Not too long ago: used to cut n past Javascript code straight from web and hope for the best
+<ul><li>familiar? :)
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">What are we covering today?</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; ">language basics</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">html scripting</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">good practices</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">tools</span>
+
+</li>
+<li>A lot to cover
+<ul><li>highlights, not debth
+<ul><li>For beginners: 
+<ul><li>I want to give you a good start for further study
+
+</li>
+<li>"Hook" for learning - what matters?
+
+</li>
+
+</ul>
+</li>
+<li>For intermediates:
+<ul><li>Hopefully come away with some handy tools, techniques, or rechecked assumptions
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Practical Stuff</span>
+<ul><li>First part of workshop
+<ul><li>Show and tell
+
+</li>
+<li>We'll gradually build up a simple dev env
+
+</li>
+<li>Turn you loose with these tools in last hour and a half. Pay attention! :)
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">History</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Netscape</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; ">1995</span>
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Eich</span>
+<ul><li>LiveScript
+
+</li>
+<li>Java was added to the browser, renamed LiveScript to JavaScript
+
+</li>
+<li>Marketing ploy
+
+</li>
+<li>Confusing name: really very little to do with Java
+<ul><li>naming conventions and superficial syntax only
+
+</li>
+
+</ul>
+</li>
+<li>Has more in common with Scheme
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">ECMAScript</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; ">1997 v1</span>
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Note on ActionScript</span>
+<ul><li>based on Ecmascript standard v. X, which was actually a dead end
+
+</li>
+<li>so ActionScript has common ancestry but is growing somewhat in its own direction
+
+</li>
+<li>AS is the strange uncle which the rest of the family no longer talks to
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">What rocks?</span>
+<ul><li>Powerful, elegant language
+<ul><li>I didn't know this until early last year, how about you?
+
+</li>
+
+</ul>
+</li>
+<li>As apps move to the web, the language is all around us
+<ul><li>Apple and Google pushing webkit hard
+<ul><li>HTML5 is coming
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>Also used in many other contexts
+<ul><li>Serverside scripting
+<ul><li>Java script lang support
+
+</li>
+<li>.net JScript??
+
+</li>
+
+</ul>
+</li>
+<li>Other uses
+<ul><li>iPhone apps
+
+</li>
+<li>Script misc applications
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; ">small learning surface</span>
+<ul><li>JS: Good Parts vs JS: Def Reference
+<ul><li>Subsetting is good
+
+</li>
+<li>We're going to go through subset of "the Good Parts" :)
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">What sucks?</span>
+<ul><li>It was rushed out the door...
+
+</li>
+<li>... so it has some sharp corners
+
+</li>
+<li>Not comfortable to develop in unless you have some basic tools and technique!
+<ul><li>But mostly because of the browser, not the core language
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Development Environment</span>
+<ul><li>I've built a basic env for you
+<ul><li>Pay attention
+
+</li>
+<li>Youre going to solve exercises in this env later on
+
+</li>
+<li>Just files and some scripts
+
+</li>
+
+</ul>
+</li>
+<li>Ways to run javascript
+<ul><li>Inline
+<ul><li>html rendering vs js eval
+
+</li>
+
+</ul>
+</li>
+<li>script src
+
+</li>
+<li>URL, on-the-fly
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Language basics</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Basic syntax</span>
+<ul><li>some familiar bits for java and .net people
+
+</li>
+<li>if, for, while, case switch, etc..
+
+</li>
+<li>Now lets look at the stuff that's different!
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Types</span>
+<ul><li>Strings, numbers, booleans, objects, arrays...
+
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Variable declaration</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Objects</span>
+<ul><li>Creating Objects
+<ul><li>Literal
+
+</li>
+<li>Dynamic
+
+</li>
+
+</ul>
+</li>
+<li>Associative array
+
+</li>
+<li>Regular array
+
+</li>
+<li>Objects can be modded on the fly
+<ul><li>No need for mocking and dependency injection. Wire it all up as needed!
+
+</li>
+<li>Avoid monkeypatching though...
+
+</li>
+
+</ul>
+</li>
+<li>Objects and arrays can be deeply nested within each other
+
+</li>
+<li>JSON
+<ul><li>rocks the socks off xml
+
+</li>
+
+</ul>
+</li>
+<li>Inheritance
+<ul><li>Quick: define an OOP language
+
+</li>
+<li>JavaScript is an OOP lang without classes!
+
+</li>
+<li>Prototype
+
+</li>
+<li>Show pseudo code example
+
+</li>
+<li>Can simulate class-based languages, though.
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Functions</span>
+<ul><li>Functions are objects
+<ul><li>Declare as variables to stay aware of this
+
+</li>
+
+</ul>
+</li>
+<li>Lambda/anon functions
+<ul><li>Callbacks
+
+</li>
+<li>Enumeration functions
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Sharp Edges</span>
+<ul><li><p><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Global variables</span>
+<ul><li>If you don't declare with var keyword in functions, the variable ends up in global scope
+
+</li>
+<li>name collisions, persistent variables
+
+</li>
+
+</ul><p>Not knowing to avoid these is like letting your child run with scissors: it's goes well until it goes really bad
+<p><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Scope</span>
+<ul><li>Function scope only, no block scope
+
+</li>
+
+</ul><p><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Semicolon insertion</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; ">You can get away with forgetting ; on end of statements</span>
+
+</li>
+<li>But the browser will have to do some guesswork
+
+</li>
+<li>Not all browser guess the same....
+
+</li>
+
+</ul><p><span style="font-family: SansSerif, sans-serif; font-style: italic; ">== vs ===</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; ">Quiz, can you guess which of the expressions evaluate to false?</span>
+
+</li>
+<li>Nasty edge cases, hard to reason about
+
+</li>
+<li>Type coercion, non-transitive
+
+</li>
+<li>Just use ===
+
+</li>
+
+</ul></li>
+</ul>
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-weight: bold; ">Advanced stuff</span>
+<ul><li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Closures</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Modules</span>
+
+</li>
+<li><span style="font-family: SansSerif, sans-serif; font-style: italic; ">Memoization</span>
+
+</li>
+
+</ul>
+</li>
+
+</ul></body>
+</html>
